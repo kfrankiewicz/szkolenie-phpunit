@@ -1,7 +1,15 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    {% if app.user %}
-        
-    {% endif %}
+    <div>
+        {% for task in tasks %}
+            <div>
+                <b>{{ task.title }}</b>
+            </div>
+        {% endfor %}
+    </div>
+    
+    {{ form_start(form) }}    
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
 {% endblock %}
